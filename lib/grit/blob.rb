@@ -121,6 +121,14 @@ module Grit
     def <=>(other)
       name <=> other.name
     end
+
+    def file?
+    	blob.mode[0] == "1" ? true : false
+    end
+
+    def directory?
+    	blob.mode[0] == "0" ? true : false
+    end
   end # Blob
 
 end # Grit
