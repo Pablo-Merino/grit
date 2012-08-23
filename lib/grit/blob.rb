@@ -123,11 +123,11 @@ module Grit
     end
 
     def file?
-    	blob.mode[0] == "1" ? true : false
+    	mode[0] == "1" ? true : false
     end
 
     def directory?
-    	blob.mode[0] == "0" ? true : false
+    	mode[0] == "0" ? true : false
     end
   end # Blob
 
